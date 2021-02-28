@@ -13,6 +13,10 @@ h2 {
   text-align: center;
 }
 
+input {
+  width: 100%;
+}
+
 
 .App-logo {
   height: 40vmin;

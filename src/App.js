@@ -64,22 +64,23 @@ function App() {
       <form className="text-memer">
         
         <label htmlFor="input">Your text:</label>
+        <br/>
           
-          <input
-            type="text"
-            name="input"
-            onChange={event => handleChange(event)}
-          />
-        
+        <input
+          type="text"
+          name="input"
+          onChange={event => handleChange(event)}
+        />
+      
         <br/>
         <br/>
         <label htmlFor="output">Me:</label>
-          
-          <input readOnly
-            type = "text"
-            name = "output"
-            value = {newText}
-          />
+        <br/>
+        <input readOnly
+          type = "text"
+          name = "output"
+          value = {newText}
+        />
         
         <br/>
         <br/>
