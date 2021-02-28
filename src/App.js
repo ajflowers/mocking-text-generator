@@ -22,27 +22,41 @@ function App() {
         output += char;
       }      
     }
-    setNewText(output);
-    console.log(newText)
-  });
+    updateText(output);
+  }, [formText, firstUpper]);
+
+  const updateText = (str) => {
+    setNewText(str);
+  }
 
   const handleChange = event => {
     event.preventDefault();
     setFormText(event.target.value);
-    console.log(event.target.value);
+    // console.log(event.target.value);
 
   }
 
-
+  const flipCase = () => {
+    setFirstUpper(!firstUpper);
+  }
 
   return (
     <div className="App">
-      <h2>EnTeR yOuR tExT hErE:</h2>
+      <h2>{firstUpper ? "EnTeR yOuR tExT hErE:" : "eNtEr YoUr TeXt HeRe:"}</h2>
       <input
         type="text"
         name="input"
         onChange={event => handleChange(event)}
       />
+      <input readOnly
+        type = "text"
+        name = "output"
+        value = {newText}
+      />
+      <button onClick={flipCase}>
+        {firstUpper ?  "InVeRt CaSe" : "iNvErT cAsE"}
+      </button>
+
      
     </div>
   );
