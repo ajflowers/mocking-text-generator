@@ -23,7 +23,7 @@ function App() {
       }      
     }
     updateText(output);
-  }, [formText, firstUpper]);
+  });
 
   const updateText = (str) => {
     setNewText(str);
@@ -36,26 +36,39 @@ function App() {
 
   }
 
-  const flipCase = () => {
+  const flipCase = (event) => {
+    event.preventDefault();
     setFirstUpper(!firstUpper);
   }
 
   return (
     <div className="App">
-      <h2>{firstUpper ? "EnTeR yOuR tExT hErE:" : "eNtEr YoUr TeXt HeRe:"}</h2>
-      <input
-        type="text"
-        name="input"
-        onChange={event => handleChange(event)}
-      />
-      <input readOnly
-        type = "text"
-        name = "output"
-        value = {newText}
-      />
-      <button onClick={flipCase}>
-        {firstUpper ?  "InVeRt CaSe" : "iNvErT cAsE"}
-      </button>
+      <form className="text-memer">
+        <h2>{firstUpper ? "MoCkInG tExT gEnErAtOr:" : "mOcKiNg TeXt GeNeRaToR:"}</h2>
+        <label htmlFor="input">Your text:</label>
+          
+          <input
+            type="text"
+            name="input"
+            onChange={event => handleChange(event)}
+          />
+        
+        <br/>
+        <br/>
+        <label htmlFor="output">Me:</label>
+          
+          <input readOnly
+            type = "text"
+            name = "output"
+            value = {newText}
+          />
+        
+        <br/>
+        <br/>
+        <button onClick={event => flipCase(event)}>
+          {firstUpper ?  "InVeRt CaSe" : "iNvErT cAsE"}
+        </button>
+      </form>
 
      
     </div>
