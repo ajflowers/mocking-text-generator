@@ -1,6 +1,18 @@
 .App {
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10%;
+}
+
+.instructions {
+  text-align: left;
+  /* width: 70%; */
+}
+
+h2 {
   text-align: center;
 }
+
 
 .App-logo {
   height: 40vmin;
