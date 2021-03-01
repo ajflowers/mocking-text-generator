@@ -18,8 +18,13 @@ function App() {
           output += char.toLowerCase();
         }
         caps = !caps;
-      } else if ((char === "\\" && i > 0) && formText.charAt(i - 1) !== "\\") {
-        caps = !caps
+      } else if (char === "\\") {
+        if (i + 1 < formText.length && formText.charAt(i + 1) === "\\") {
+          output += "\\";
+          i++;
+        } else {
+          caps = !caps;
+        }
       } else {
         output += char;
       }      
@@ -51,16 +56,22 @@ function App() {
 
         <ul>
           <li>Enter your text in the top box.</li>
-          <li>The mememified text will automatically appear in the lower box.</li>
+          <li>The memeified text will automatically appear in the lower box.</li>
           <li>Use the "invert case" button to switch all uppercase and lowercase letters in the output.</li>
           <li>If the text is not to your liking in either configuration, you can edit the case of individual letters by placing a backslash ("\") in front of them.</li>
           <ul>
-            <li>The backslash indicates that a given character should be the same case as the character before it.</li>
-            <li>The backslash may not modify the first character of your text.</li>
+            <li>A single backslash will flip the case of the next letter that follows. All subsequent letters will continue the alternating case pattern based on that letter's new case.</li>
+            <li>A double backslash will render as a single backslash without altering the next letter's case.</li>
+            <li>What about a triple backspace?</li>
+            <ul>
+              <li>Me: WhAt AbOuT a TrIpLe BaCkSpAcE?</li>
+              <li>Seriously, just try it. You'll figure it out quickly enough.</li>
+            </ul>
             
           </ul>
         </ul>
       </div>
+
       <form className="text-memer">
         
         <label htmlFor="input">Your text:</label>
@@ -88,7 +99,6 @@ function App() {
           {firstUpper ?  "InVeRt CaSe" : "iNvErT cAsE"}
         </button>
       </form>
-
      
     </div>
   );
