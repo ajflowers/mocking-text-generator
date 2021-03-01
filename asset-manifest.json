@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/mocking-text-generator/static/css/main.2c80277e.chunk.css",
-    "main.js": "/mocking-text-generator/static/js/main.567ad24e.chunk.js",
-    "main.js.map": "/mocking-text-generator/static/js/main.567ad24e.chunk.js.map",
+    "main.js": "/mocking-text-generator/static/js/main.90794828.chunk.js",
+    "main.js.map": "/mocking-text-generator/static/js/main.90794828.chunk.js.map",
     "runtime-main.js": "/mocking-text-generator/static/js/runtime-main.6f11f2c1.js",
     "runtime-main.js.map": "/mocking-text-generator/static/js/runtime-main.6f11f2c1.js.map",
     "static/js/2.bc5dafc3.chunk.js": "/mocking-text-generator/static/js/2.bc5dafc3.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.6f11f2c1.js",
     "static/js/2.bc5dafc3.chunk.js",
     "static/css/main.2c80277e.chunk.css",
-    "static/js/main.567ad24e.chunk.js"
+    "static/js/main.90794828.chunk.js"
   ]
 }
