@@ -62,9 +62,9 @@ function App() {
           <ul>
             <li>A single backslash will flip the case of the next letter that follows. All subsequent letters will continue the alternating case pattern based on that letter's new case.</li>
             <li>A double backslash will render as a single backslash without altering the next letter's case.</li>
-            <li>What about a triple backspace?</li>
+            <li>What about a triple backslash?</li>
             <ul>
-              <li>Me: WhAt AbOuT a TrIpLe BaCkSpAcE?</li>
+              <li>Me: WhAt AbOuT a TrIpLe BaCkSLaSh?</li>
               <li>Seriously, just try it. You'll figure it out quickly enough.</li>
             </ul>
             
